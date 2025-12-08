@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Sent</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #2a0f3a, #140c24);
+      font-family: "Poppins", system-ui;
+      color: #fff;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      padding: 30px 25px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 8px 40px rgba(255, 0, 120, 0.25);
+    }
+
+    .check {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 22px;
+    }
+
+    p {
+      opacity: 0.85;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: 0.2s;
+      background: linear-gradient(135deg, #ff86c8, #ff4faa);
+      color: white;
+      box-shadow: 0 6px 25px rgba(255, 90, 150, 0.35);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="check">✅</div>
+    <h1>Your message has been sent successfully</h1>
+    <p>It reached safely. You can go back whenever you want.</p>
+
+    <a href="/"><div class="btn">⬅ Go Back</div></a>
+  </div>
+</body>
+</html>
