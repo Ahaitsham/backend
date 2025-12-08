@@ -24,7 +24,7 @@ app.post("/message", async (req, res) => {
   try {
     await resend.emails.send({
       from: "Website <onboarding@resend.dev>",
-      to: ["yourgmail@gmail.com"], // ✅ YOUR EMAIL
+      to: "ahtshamsaifi345@gmail.com", // ✅ YOUR EMAIL
       subject: `Form submitted by ${name}`,
       text: `Name: ${name}\n\nMessage:\n${message}`,
     });
