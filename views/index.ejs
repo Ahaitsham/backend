@@ -8,13 +8,13 @@
 
     <style>
         :root {
-            --bg: #1a0f24;
-            --pink: #ff86c8;
-            --pink-light: #ffb3dd;
-            --purple: #8a5cff;
-            --glass: rgba(255, 255, 255, 0.06);
-            --soft: rgba(255, 255, 255, 0.13);
-            --text: #fafaff;
+            --bg: #0f1224;
+            --pink: #ff9ecd;
+            --pink-light: #ffd6ea;
+            --purple: #9b7cff;
+            --glass: rgba(255, 255, 255, 0.08);
+            --soft: rgba(255, 255, 255, 0.18);
+            --text: #fdfdff;
             font-family: "Poppins", "Segoe UI", system-ui;
         }
 
@@ -23,7 +23,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background: linear-gradient(135deg, #2a0f3a, #140c24 60%, #180b2e);
+            background: linear-gradient(135deg, #171a3a, #0f1224 60%, #1e1442);
             color: var(--text);
         }
 
@@ -36,13 +36,13 @@
         }
 
         .card {
-            width: min(700px, 95%);
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 18px;
-            padding: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 8px 40px rgba(255, 0, 120, 0.22);
+            width: min(720px, 95%);
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 26px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 10px 45px rgba(255, 120, 180, 0.25);
             animation: fadeIn 1.3s ease;
         }
 
@@ -69,7 +69,7 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #ff8ad8, #ff47a9);
+            background: linear-gradient(135deg, #ff9ecd, #ff6fae);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -79,17 +79,9 @@
         }
 
         @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         h1 {
@@ -100,7 +92,7 @@
 
         p.lead {
             margin-top: 6px;
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
         .names {
@@ -113,31 +105,32 @@
         .pill {
             padding: 8px 14px;
             border-radius: 50px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             font-weight: 600;
         }
 
         .message,
         .poem {
-            margin-top: 15px;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 16px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 14px;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .poem {
             font-style: italic;
             color: var(--pink-light);
+            text-align: center;
         }
 
         .buttons {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 22px;
         }
 
         button {
@@ -151,7 +144,7 @@
         }
 
         .btn-forgive {
-            background: linear-gradient(135deg, var(--pink), #ff4faa);
+            background: linear-gradient(135deg, var(--pink), #ff6fae);
             color: white;
             box-shadow: 0 6px 25px rgba(255, 90, 150, 0.35);
         }
@@ -166,20 +159,13 @@
             color: var(--pink-light);
         }
 
-        .btn-music {
-            background: rgba(255, 255, 255, 0.07);
-            color: var(--pink-light);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-        }
-
-        /* input */
         #noteInput {
             width: 100%;
-            margin-top: 15px;
+            margin-top: 12px;
             padding: 12px;
             border-radius: 12px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             color: white;
         }
 
@@ -187,11 +173,11 @@
             margin-top: 10px;
             padding: 12px;
             border-radius: 12px;
-            background: rgba(255, 255, 255, 0.07);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
+            width: 100%;
         }
 
-        /* hearts falling */
         .heart {
             position: fixed;
             top: -10vh;
@@ -209,179 +195,136 @@
         }
 
         @media(max-width:450px) {
-            h1 {
-                font-size: 18px;
-            }
-
-            .avatar {
-                width: 65px;
-                height: 65px;
-                font-size: 26px;
-            }
+            h1 { font-size: 18px; }
+            .avatar { width: 65px; height: 65px; font-size: 26px; }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="wrap">
-        <div class="card">
-            <header>
-                <div class="avatar">💖</div>
-                <div> <button id="touchMeBtn" class="btn-forgive" style="margin-top:15px;">🎵 Touch Me</button>
-                    <h1>This tiny website is only for you!</h1>
-                    <p class="lead">To Nandini • Vanshika • Parul — every version of you is priceless to me.</p>
-                    <div class="names">
-                        <div class="pill">Nandini</div>
-                        <div class="pill">Vanshika</div>
-                        <div class="pill">Parul</div>
-                    </div>
+<div class="wrap">
+    <div class="card">
 
-
+        <header>
+            <div class="avatar">💖</div>
+            <div>
+                <button id="touchMeBtn" class="btn-forgive" style="margin-top:15px;">🎵 Touch Me</button>
+                <h1>Just something small, made only for you 💫</h1>
+                <p class="lead">Home feels warmer when you are there — stay happy, stay you</p>
+                <div class="names">
+                    <div class="pill">Nandini</div>
+                    <div class="pill">Vanshika</div>
+                    <div class="pill">Parul</div>
                 </div>
-            </header>
-
-            <div class="message" id="mainMessage">
-
-                <p>Hey, I just wanted to clear one small thing from that night. When I called you around 12 am and you
-                    told me you were talking to Anurag and then shared your screen, I reacted bit off at that moment. I
-                    still don’t know why exactly, maybe tiredness or maybe I just overthink stupid things sometimes. I
-                    never meant to make anything weird or uncomfortable for you.</p> <br>
-
-                <p>If it felt rude or bad from my side, that was honestly not my intention at all. What I really want to
-                    say is this — you are one of the most genuine, sweet, cute and beautiful person I’ve ever met. Your
-                    nature, your heart and the way you are, that is something very rare. </p> <br>
-
-                <p>And about all this stuff around… some people just can’t digest seeing someone happy or close. Instead
-                    of talking sense, they choose to manipulate, judge and poison others mind with their nonsense. That
-                    pisses me off, not because I care about them, but because they say things without knowing anything
-                    about you. </p><br>
-                <p>People are always going to say bad things about you and your character, even when you are doing
-                    absolutely nothing wrong. That’s the harsh truth. But please don’t let words from jealous or
-                    frustrated people, especially those who talk shit under influence or anger, make you question
-                    yourself. </p>
-                <br>
-
-                <p>You are way better than that noise. Just be you, always. That’s more than enough.</p>
-                <br>
-
-                <i style="font-size: small;">(PS: This is not written by ChatGPT or any AI, it’s written by a human with
-                    overthinking, emotions and bad grammar.)</i>
-
             </div>
+        </header>
 
-            <div class="poem">
-                F*ck people who talks shit about you !. And yeah don't forget to bring some chocolates , food made by
-                your hand and shatter me series for me while returning back to college 😁.
-            </div>
+        <div class="message" id="mainMessage">
+            <p>
+                I know you are home right now, probably relaxing a bit.
+                And honestly… I miss you. Not in a dramatic way,
+                just that calm kind of missing where small things remind me of you.
+            </p><br>
 
+            <p>
+                Some people talk nonsense, some judge without knowing anything.
+                But none of that defines you. You are genuine, warm,
+                and way too real for that noise.
+            </p><br>
 
+            <p>
+                When you come back, you owe me handmade food 🍱,
+                a big smile, and yes —
+                a proper party for your new laptop and tablet 🎉.
+            </p><br>
 
-            <div class="buttons">
-                <button class="btn-forgive" id="forgiveBtn">💗 No worries! we're good</button>
-                <button class="btn-no" id="noBtn">❌ Nope</button>
-                <!-- <button class="btn-music" id="musicBtn">🎵 Music ON/OFF</button> -->
-            </div>
+            <p>
+                Please don’t eat too much unhealthy junk food.
+                Take care of your health, stay fit, stay glowing.
+                And take care of your family too.
+                That matters a lot.
+            </p><br>
 
-            <form action="/message" method="post">
-                <input id="noteInput" type="text"  placeholder="Type your message" name="message">
-                <input id="noteInput" type="text"  placeholder="Enter your name" name="name">
-                <button type="submit" id="sendNote">Send</button>
-            </form>
+            <p>
+                Just be you. That’s already more than enough.
+            </p>
+
+            <i style="font-size: small;">
+                (PS: Not written by any AI, just emotions, bad grammar and honesty.)
+            </i>
         </div>
+
+        <div class="message">
+            <h3 style="margin-bottom:8px; color: var(--pink-light);">
+                💌 Today’s Message — <span style="font-size:14px;">22 Jan 2026</span>
+            </h3>
+            <p>
+                You are looking absolutely gorgeous in that saree.
+                Couldn’t take my eyes off you.
+            </p>
+        </div>
+
+        <div class="poem">
+            Missing you, but not crying about it 😌 <br>
+            Just waiting for your handmade food, stories,
+            and that smile I like too much.
+        </div>
+
+        <div class="buttons">
+            <button class="btn-forgive" id="forgiveBtn">💗 It’s okay, come talk</button>
+            <button class="btn-no" id="noBtn">❌ Not today</button>
+        </div>
+
+        <form action="/message" method="post">
+            <input id="noteInput" type="text" placeholder="Type your message" name="message">
+            <input id="noteInput" type="text" placeholder="Enter your name" name="name">
+            <button type="submit" id="sendNote">Send</button>
+        </form>
+
     </div>
+</div>
 
-    <!-- REAL MUSIC -->
-    <audio id="bgMusic" loop autoplay>
-        <!-- ADD YOUR MUSIC LINK HERE -->
-        <source src="Jax - Like My Father (Official Video) [GCWl50HQZIM].mp3" type="audio/mpeg">
-    </audio>
+<audio id="bgMusic" loop autoplay>
+    <source src="Jax - Like My Father (Official Video) [GCWl50HQZIM].mp3" type="audio/mpeg">
+</audio>
 
-    <script>
-        function rand(min, max) { return Math.random() * (max - min) + min; }
+<script>
+    function rand(min, max) { return Math.random() * (max - min) + min; }
 
-        /* Falling hearts */
-        for (let i = 0; i < 20; i++) {
-            const h = document.createElement('div');
-            h.className = 'heart';
-            h.style.left = rand(0, 100) + 'vw';
-            h.style.animationDuration = rand(6, 16) + 's';
-            h.innerHTML = "💗";
-            document.body.appendChild(h);
+    for (let i = 0; i < 18; i++) {
+        const h = document.createElement('div');
+        h.className = 'heart';
+        h.style.left = rand(0, 100) + 'vw';
+        h.style.animationDuration = rand(6, 16) + 's';
+        h.innerHTML = "💗";
+        document.body.appendChild(h);
+    }
+
+    noBtn.onmouseenter = () => {
+        const x = rand(20, window.innerWidth - 100);
+        const y = rand(80, window.innerHeight - 100);
+        noBtn.style.position = "absolute";
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    };
+
+    forgiveBtn.onclick = () => {
+        mainMessage.innerHTML = "Thank you for giving me your time. Whenever you're ready, I’m here ❤️";
+    };
+
+    const bg = document.getElementById("bgMusic");
+    let musicStarted = false;
+    const touchBtn = document.getElementById("touchMeBtn");
+
+    touchBtn.onclick = () => {
+        if (!musicStarted) {
+            bg.play().catch(() => {});
+            musicStarted = true;
+            touchBtn.style.display = "none";
         }
-
-        /* NO button runaway */
-        noBtn.onmouseenter = () => {
-            const x = rand(20, window.innerWidth - 100);
-            const y = rand(80, window.innerHeight - 100);
-            noBtn.style.position = "absolute";
-            noBtn.style.left = x + "px";
-            noBtn.style.top = y + "px";
-        };
-
-        /* Forgive button */
-        forgiveBtn.onclick = () => {
-            mainMessage.innerHTML = "Thank you for giving me even a second of your time. Whenever you're ready, I'm here to talk ❤️";
-        };
-
-        /* Note adding */
-        // sendNote.onclick = async () => {
-        //     const val = noteInput.value.trim();
-        //     if (!val) return;
-
-        //     // show on page
-        //     mainMessage.innerHTML += "<br><br><b>Extra Note:</b> " + val;
-        //     noteInput.value = "";
-
-        //     // send email
-        //     try {
-        //         await fetch("/api/sendMail", {
-        //             method: "POST",
-        //             headers: {
-        //                 "Content-Type": "application/json"
-        //             },
-        //             body: JSON.stringify({
-        //                 name: "Nandini Website",
-        //                 message: val
-        //             })
-        //         });
-        //     } catch (e) {
-        //         console.log("mail failed", e);
-        //     }
-        // };
-
-        /* Music toggle */
-        const bg = document.getElementById("bgMusic");
-        let musicStarted = false;
-
-        // Touch Me button to start music
-        const touchBtn = document.getElementById("touchMeBtn");
-        touchBtn.onclick = () => {
-            if (!musicStarted) {
-                bg.play().catch(() => { });
-                musicStarted = true;
-                touchBtn.style.display = "none"; // hide button after starting
-            }
-        };
-
-        window.addEventListener("click", function () {
-            const bg = document.getElementById("bgMusic");
-            bg.play().catch(() => { });
-        }, { once: true });
-
-
-
-
-
-
-    </script>
-
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-
+    };
+</script>
 
 </body>
-
 </html>
